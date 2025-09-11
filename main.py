@@ -61,6 +61,7 @@ def main():
     grid[row_h + 1][col_h + 0] = 1
 
     prev_g = []
+    pre_pg = []
 
     while True:
         grid = next_generation(grid)
@@ -68,8 +69,12 @@ def main():
         if grid == prev_g:
             break
 
+        if grid == pre_pg:
+            break
+
         print_grid(grid)
 
+        pre_pg = prev_g
         prev_g = grid
 
         time.sleep(0.1)
