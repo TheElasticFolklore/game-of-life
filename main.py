@@ -40,7 +40,7 @@ def print_grid(grid):
             else:
                 stream += " ■"
         stream += "\n"
-    print(stream, end="")
+    print(stream[:-1], end="")
 
 
 def main():
