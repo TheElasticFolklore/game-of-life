@@ -32,14 +32,15 @@ def next_generation(grid):
 
 
 def print_grid(grid):
-    print("\033[H\033[J", end="")
+    stream = "\033[H\033[J"
     for row in grid:
         for cell in row:
             if cell == 0:
-                print(" .", end="")
+                stream += " ."
             else:
-                print(" ■", end="")
-        print()
+                stream += " ■"
+        stream += "\n"
+    print(stream, end="")
 
 
 def main():
